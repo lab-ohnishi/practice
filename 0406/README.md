@@ -29,3 +29,7 @@
 
 - 作るもの
 
+|preview1|preview2|
+|---|---|
+|![preview1](preview1.png)|![preview2](preview2.png)|
+
