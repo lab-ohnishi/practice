@@ -21,6 +21,8 @@
 
 - Githubアカウント作成
   - Invite as a member 
+- Git環境の構築
+  - インストール等 
 - Slackアカウント作成
   - Invite as a member
 - ドットインストールアカウント作成
