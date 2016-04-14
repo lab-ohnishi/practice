@@ -5,27 +5,38 @@
 
 <body>
 
-<font size="4"><div style="text-align:center">This is a sample!</div></font>
-<br>
+<style type="text/css">
+<!--
+input[type="button"]{
+  background-color: blue;
+  color: white;
+  border: 2px solid black;
+}
+-->
+</style>
 
-  <input type="button" onclick="sample1()" value="Sample1" width="500" heigh="500">
-  <input type="button" onclick="sample2()" value="Sample2" width="500" heigh="500">
+<font size="4"><div style="text-align:center">This is a sample!</div></font>
+
+<p> <input type="button" onclick="sample1()" value="Sample1" width="500" heigh="500">
+</p>
+<p> <input type="button" onclick="sample2()" value="Sample2" width="500" heigh="500">
+</p>
 
 <SCRIPT type= "text/javascript">
 <!--
 function sample1(){
   document.area1.src = "../Sum.jpg";
-
 }
-
 function sample2(){
   document.area1.src = "../Moon.jpg";
 }
 -->
+
 </SCRIPT>
-<div style="text-align:center"><img src= "../Sum.jpg" name="area1" width="500" heigh="500"></div>
+
+<div style="text-align:center">
+ <img src= "../Sum.jpg" name="area1" width="500" heigh="500">
+</div>
 
 </body>
 </html>
-
-
