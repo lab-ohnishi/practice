@@ -1,0 +1,16 @@
+    button.button1{
+      type:button;
+      font-size: 1.2em;
+      font-weight: bold;
+      border-style: none;
+      color:white;
+      background-color:#248;
+      position:absolute;
+      width:120px;
+      height:35px;
+    }
+
+    button.button1:hover{
+      background-color:#24d;
+      color:white;
+    }
