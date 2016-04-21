@@ -1,31 +1,55 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
 <title> test </title>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+
 </head>
 
 <body>
 
-<font size="4">This is a sample!</font>
-<br>
+<style type="text/css">
+
+input[type="button"]{
+	background-color: blue;
+	color: white;
+	border: 2px solid black;
+	}
+div.button{width:500px;height:400;position:relative;}
+span.button{position:absolute; top:100px; right:300px;}
+div.center{text-align:center;}
+
+</style>
+
+<span class="button">
+<input type="button" onclick="sample1()" value="Sample1">
+<input type="button" onclick="sample2()" value="Sample2">
+</span>
+
+
+<div class="center">
+<h2>This is a sample</h2>
+<img src= "../Sum.jpg" name="area1" width="500" heigh="500">
+</div>
+
 <SCRIPT type= "text/javascript">
 <!--
 function sample1(){
-  document.area1.src = "../Sum.jpg";
-
+	document.area1.src = "../Sum.jpg";
 }
-
 function sample2(){
-  document.area1.src = "../Moon.jpg";
+	document.area1.src = "../Moon.jpg";
 }
 -->
 </SCRIPT>
-<img src= "../Sum.jpg" name="area1" width="500" heigh="500">
-
-
-　<input type="button" onclick="sample1()" value="Sample1" width="500" heigh="500">
-　<input type="button" onclick="sample2()" value="Sample2" width="500" heigh="500">
 
 </body>
 </html>
-
-
