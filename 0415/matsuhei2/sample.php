@@ -26,14 +26,14 @@ exit('データベース接続失敗。'.$e->getMessage());
     <h1>データ入力フォーム</h1>
 
 
-     <form>
+     <form action="sample.php" method="URI">
       <div class="form-group">
        <label>name</label>
-       <input type="text" name="email" class="form-control">
+       <input type="text" name="name" class="form-control">
       </div>
       <div class="form-group">
        <label>prefecture</label>
-      <select class="form-control">
+      <select id="prefecture" name="prefecture" class="form-control">
         <option>北海道</option>
         <option>青森県</option>
         <option>秋田県</option>
@@ -82,7 +82,13 @@ exit('データベース接続失敗。'.$e->getMessage());
         <option>鹿児島県</option>
         <option>沖縄県</option>
       </select> 
+      <br>
+
+<!-- <a href="sample.php"> -->
        <button type="submit">送信</button>
+<!--       </a> -->
+       </br>
+      
       </div>
     </form>
   </div>
@@ -106,7 +112,20 @@ exit('データベース接続失敗。'.$e->getMessage());
           print('<td class="prefecture">'.$row['prefecture'].'</td>');
           print('</tr>');
         }
-        ?>
+if( $_POST['name'] == '' ) {
+    print 'nameを入力しよう<br>';
+}
+else if($_POST['prefecture'] == ''){
+    print 'prefectureを選ぼう<br>';
+}
+else {
+$stmt = $pdo -> prepare("INSERT INTO tourist_spots (id, name, prefecture) VALUES ('',:name, :prefecture)");
+$stmt->bindParam(':name', $_POST['name'], PDO::PARAM_STR);
+$stmt->bindValue(':prefecture', $_POST['prefecture'], PDO::PARAM_STR);
+$stmt->execute();
+}
+      ?>
+
       </tbody>
     </table>
   </div>
