@@ -24,8 +24,6 @@ exit('データベース接続失敗。'.$e->getMessage());
   <body class="container">
    <div class="container pull-left col-xs-4">
     <h1>データ入力フォーム</h1>
-
-
      <form action="sample.php" method="post">
       <div class="form-group">
        <label>name</label>
@@ -83,48 +81,36 @@ exit('データベース接続失敗。'.$e->getMessage());
         <option>沖縄県</option>
       </select> 
       <br>
-
-<!-- <a href="sample.php"> -->
-       <button type="submit">送信</button>
-<!--       </a> -->
-       </br>
-      
+        <button type="submit">送信</button>
+      </br>
       </div>
     </form>
   </div>
   <div class="conteiner pull-right col-xs-6">
-   <h1>データ一覧</h1>
-    <table class="table">
-      <thead>
-        <tr>
-          <th>id</th>
-          <th>name</th>
-          <th>prefecture</th>
-        </tr>
-      </thead>
+    <h1>データ一覧</h1>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>prefecture</th>
+          </tr>
+        </thead>
       <tbody>
         <?php
-if( $_POST['name'] == '' ) {
-    print 'nameを入力しよう<br>';
-}
-if($_POST['prefecture'] == ''){
-    print 'prefectureを選ぼう<br>';
-}
-
-$stmt = $pdo -> prepare("INSERT INTO tourist_spots (id, name, prefecture) VALUES ('',:name, :prefecture)");
-$stmt->bindValue(':name', $_POST['name'], PDO::PARAM_STR);
-$stmt->bindValue(':prefecture', $_POST['prefecture'], PDO::PARAM_STR);
-$stmt->execute();
-        $stmt = $pdo->query("SELECT * FROM tourist_spots");
-        while($row = $stmt -> fetch(PDO::FETCH_ASSOC)) {
-        print('<tr>');
-          print('<td class="id">'.$row['id'].'</td>');
-          print('<td class="name">'.$row['name'].'</td>');
-          print('<td class="prefecture">'.$row['prefecture'].'</td>');
-          print('</tr>');
-        }
-      ?>
-
+          $stmt = $pdo -> prepare("INSERT INTO tourist_spots (id, name, prefecture) VALUES ('',:name, :prefecture)");
+          $stmt->bindValue(':name', $_POST['name'], PDO::PARAM_STR);
+          $stmt->bindValue(':prefecture', $_POST['prefecture'], PDO::PARAM_STR);
+          $stmt->execute();
+          $stmt = $pdo->query("SELECT * FROM tourist_spots ORDER BY id DESC");
+          while($row = $stmt -> fetch(PDO::FETCH_ASSOC)) {
+            print('<tr>');
+            print('<td class="id">'.$row['id'].'</td>');
+            print('<td class="name">'.$row['name'].'</td>');
+            print('<td class="prefecture">'.$row['prefecture'].'</td>');
+            print('</tr>');
+          }
+        ?>
       </tbody>
     </table>
   </div>
