@@ -1,8 +1,9 @@
+window.addEventListener("load",function(){
   var alpha = [];
   var until = [];
   var result = [];
-  function start(){
-    var rand_num = Math.floor(Math.random()*26);
+
+  $('#start').click(function(){
     if(alpha[0] != "a"){
       for(var i=97;i<=122;i++){
         alpha.push(String.fromCharCode(i));
@@ -21,4 +22,5 @@
     document.getElementById('rest').innerHTML = until;
     document.getElementById('histories').innerHTML = result;
 
-  }
+  });
+});
