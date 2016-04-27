@@ -4,7 +4,7 @@ window.addEventListener("load",function(){
   var result = [];
   var rand_num;
 
-  function initialize(alpha,rest){
+  function initialize(){
     if(alpha[0] != "a"){
       for(var i=97;i<=122;i++){
         alpha.push(String.fromCharCode(i));
@@ -13,7 +13,7 @@ window.addEventListener("load",function(){
     }
   }
 
-  function rest_delete(alpha,rest,rand_num){
+  function rest_delete(){
     for(var j=0;j<26;j++){
       if(rest[j] == alpha[rand_num]){
         rest[j] = "-";
@@ -22,7 +22,7 @@ window.addEventListener("load",function(){
     }
   }
 
-  function Display(alpha,rest,result,rand_num){
+  function Display(){
     document.getElementById('result').innerHTML = alpha[rand_num];
     document.getElementById('rest').innerHTML = rest;
     document.getElementById('histories').innerHTML = result;
