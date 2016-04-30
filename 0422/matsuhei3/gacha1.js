@@ -12,7 +12,10 @@ window.addEventListener("load",function(){
       }
     }
   }
-
+  function getGacha(){
+    rand_num = Math.floor(Math.random()*26);
+    return rand_num;
+  }
   function rest_delete(){
     for(var j=0;j<26;j++){
       if(rest[j] == alpha[rand_num]){
@@ -22,17 +25,17 @@ window.addEventListener("load",function(){
     }
   }
 
-  function Display(){
+  function display(){
     document.getElementById('result').innerHTML = alpha[rand_num];
     document.getElementById('rest').innerHTML = rest;
     document.getElementById('histories').innerHTML = result;
   }
 
   $('#start').click(function(){
-    initialize(alpha,rest);
-    rand_num = Math.floor(Math.random()*26);
-    rest_delete(alpha,rest,rand_num);
+    initialize();
+    rest_delete();
+    getGacha();
     result.unshift(alpha[rand_num]);
-    Display(alpha,rest,result,rand_num);
+    display();
   });
 });
