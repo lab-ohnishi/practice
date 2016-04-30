@@ -1,16 +1,21 @@
-button.button1{
-     position:absolute;
-     color:white;
-     background-color:248;
-     width:120px;
-     height:35px;
-     font-size: 1.2em;
-     font-weight: bold;
-     border-style: none;
+button.chenge_Img_button{
+  color:white;
+  background-color:248;
+  width:120px;
+  height:35px;
+  font-size: 1.2em;
+  font-weight: bold;
+  border-style: none;
 }
 
-button.button1:hover{
+button.chenge_Img_button:hover{
   background-color: #24d;
   color: #fff;
 }
+ul{
+  list-style: none;
 
+}
+li{
+  margin-top: 1em;
+}
