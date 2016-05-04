@@ -27,6 +27,6 @@
   - Laravel5の環境構築
     - [Laravel homesteadを利用したLaravel 5 ローカル開発環境の構築 | hrendoh's memo](http://blog.hrendoh.com/setting-up-laravel-local-dev-environment-with-homestead/)
   - 以下の画面が表示されたら完了
-  - ![Laravel 5](https://photos-1.dropbox.com/t/2/AACyBONVyvk6c4s63S5oJ8skJfcdZ10ozv1eDccA7nT6vA/12/73021002/png/32x32/1/_/1/2/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202016-05-04%2019.54.35.png/ELbt1zgY2-wgIAIoAigE/FifwQtez928qGfc-nqpad1XMDJKp9B3smChlfZZZa9M?size=1280x960&size_mode=3)
+  - ![Laravel 5](completeImage.png)
 
 
