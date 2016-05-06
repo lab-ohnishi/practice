@@ -22,7 +22,7 @@ exit('データベース接続失敗。'.$e->getMessage());
      <style type="text/css">
      </style>
   </head>
-  <body class="container">
+  <body>
    <div class="container pull-left col-xs-4">
     <h1>データ入力フォーム</h1>
      <form action="sample.php" method="post">
