@@ -12,9 +12,8 @@ window.addEventListener("load",function(){
       }
     }
   }
-  function getGacha(){
+  function get_gacha(){
     rand_num = Math.floor(Math.random()*26);
-    return rand_num;
   }
   function rest_delete(){
     for(var j=0;j<26;j++){
@@ -25,6 +24,10 @@ window.addEventListener("load",function(){
     }
   }
 
+  function result_update(){
+    result.unshift(alpha[rand_num]);
+  }
+
   function display(){
     document.getElementById('result').innerHTML = alpha[rand_num];
     document.getElementById('rest').innerHTML = rest;
@@ -33,9 +36,9 @@ window.addEventListener("load",function(){
 
   $('#start').click(function(){
     initialize();
+    get_gacha();
     rest_delete();
-    getGacha();
-    result.unshift(alpha[rand_num]);
+    result_update();
     display();
   });
 });
