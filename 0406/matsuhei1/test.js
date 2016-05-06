@@ -1,10 +1,10 @@
 window.addEventListener("load",function(){
 
   function update(button){
-    var up_img = button.attr('img_data');
+    var up_img = button.attr('name');
     document.area1.src = up_img;
   }
-  $(".chenge_Img_button").click(function(){
+  $(".change_Img_button").click(function(){
     update($(this));
   });
 });

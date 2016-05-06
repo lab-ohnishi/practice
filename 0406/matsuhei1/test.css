@@ -1,4 +1,4 @@
-button.chenge_Img_button{
+button.change_Img_button{
   color:white;
   background-color:248;
   width:120px;
@@ -8,7 +8,7 @@ button.chenge_Img_button{
   border-style: none;
 }
 
-button.chenge_Img_button:hover{
+button.change_Img_button:hover{
   background-color: #24d;
   color: #fff;
 }
