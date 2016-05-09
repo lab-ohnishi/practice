@@ -1,4 +1,4 @@
-button.change_Img_button{
+button.change_img_button{
   color:white;
   background-color:248;
   width:120px;
@@ -8,7 +8,7 @@ button.change_Img_button{
   border-style: none;
 }
 
-button.change_Img_button:hover{
+button.change_img_button:hover{
   background-color: #24d;
   color: #fff;
 }

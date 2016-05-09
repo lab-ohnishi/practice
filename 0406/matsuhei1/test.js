@@ -4,7 +4,7 @@ window.addEventListener("load",function(){
     var up_img = button.attr('name');
     document.area1.src = up_img;
   }
-  $(".change_Img_button").click(function(){
+  $(".change_img_button").click(function(){
     update($(this));
   });
 });
