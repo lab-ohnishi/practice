@@ -34,8 +34,10 @@ window.addEventListener("load",function(){
     document.getElementById('histories').innerHTML = result;
   }
 
-  $('#start').click(function(){
+  $(function(){
     initialize();
+  });
+  $('#start').click(function(){
     get_gacha();
     rest_delete();
     result_update();
