@@ -12,9 +12,11 @@ window.addEventListener("load",function(){
       }
     }
   }
+
   function get_gacha(){
     rand_num = Math.floor(Math.random()*26);
   }
+
   function rest_delete(){
     for(var j=0;j<26;j++){
       if(rest[j] == alpha[rand_num]){
@@ -37,6 +39,7 @@ window.addEventListener("load",function(){
   $(function(){
     initialize();
   });
+
   $('#start').click(function(){
     get_gacha();
     rest_delete();
