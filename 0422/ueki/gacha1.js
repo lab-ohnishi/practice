@@ -17,7 +17,7 @@ window.addEventListener("load",function(){
 		}	
 		rest = [].concat(alphabet);
 	
-		viewGacha();
+		viewGacha(result, rest, history);
 	}
 
 	function getGacha(){
