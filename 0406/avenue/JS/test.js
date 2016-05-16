@@ -1,6 +1,4 @@
-function sample1(){
-	document.area1.src = "image/Sun.jpg";
-}
-function sample2(){
-	document.area1.src = "image/Moon.jpg";
+function changeImg(button,n){
+	var Img = "image/Sample"+n+".jpg"; 
+	document.getElementById(button).setAttribute("src",Img);
 }
