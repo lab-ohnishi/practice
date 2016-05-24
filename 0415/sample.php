@@ -21,16 +21,15 @@ exit('データベース接続失敗。'.$e->getMessage());
         </tr>
       </thead>
       <tbody>
-        <?php
-        $stmt = $pdo->query("SELECT * FROM tourist_spots");
-        while($row = $stmt -> fetch(PDO::FETCH_ASSOC)) {
-        print('<tr>');
-          print('<td class="id">'.$row['id'].'</td>');
-          print('<td class="name">'.$row['name'].'</td>');
-          print('<td class="prefecture">'.$row['prefecture'].'</td>');
-          print('</tr>');
-        }
-        ?>
+  	<?php
+     $stmt = $pdo->query("SELECT * FROM tourist_spots");
+	 	 while($row = $stmt -> fetch(PDO::FETCH_ASSOC)) {
+      print('<tr>');
+	      print('<td class="id">'.$row['id'].'</td>');
+        print('<td class="name">'.$row['name'].'</td>');
+        print('<td class="prefecture">'.$row['prefecture'].'</td>');						        print('</tr>');
+  	 }
+	   ?>
       </tbody>
     </table>
   </div>
